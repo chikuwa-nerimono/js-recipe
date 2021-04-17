@@ -1,27 +1,14 @@
-const display = document.getElementById("display")
-const button = document.getElementById("button")
+const choice1 = document.getElementById("choice1")
+const choice2 = document.getElementById("choice2")
+const choice3 = document.getElementById("choice3")
+const feedback = document.getElementById("feedback")
 
-let count = 0
-
-const countUp = function() {
-  // count を更新
-  count += 1
-  // count を秒単位にして表示
-  console.log(count) // 追加
-  display.textContent = count / 100
+choice1.onclick = function() {
+  feedback.textContent = "不正解。どうみてもはんぺんじゃないじゃん。"
 }
-
-let id = null
-
-button.onclick = function() {
-  if (id === null) {
-    // start
-    id = setInterval(countUp, 10)
-    button.textContent = "stop"
-  } else {
-    // stop
-    clearInterval(id)
-    id = null
-    button.textContent = "start"
-  }
+choice2.onclick = function() {
+  feedback.textContent = "不正解。作者は蒲鉾の方が好みだったりする。"
+}
+choice3.onclick = function() {
+  feedback.textContent = "正解！ちくわといえばこれだよね～"
 }
