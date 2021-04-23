@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memoアプリ</title>
+  </head>
+  <body>
+    <input id="memo-input" />
+    <button id="add-button">保存する</button>
+    <div id="memocontainer"></div>
+
+    <script>
+      const memoInput = document.getElementById("memo-input")
+      const Addbutton = document.getElementById("add-button")
+
+      Addbutton.onclick = function() {
+        const memoContainer = document.getElementById("memocontainer")
+        const container = document.createElement("div")
+        const text = memoInput.value
+        container.textContent = text
+        memoContainer.append(container)
+        console.dir(memoInput)
+        memoInput.value = ""
+      }
+    </script>
+  </body>
+</html>
