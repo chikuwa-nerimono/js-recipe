@@ -2,6 +2,6 @@
 
 ```bash
 git add .
-git commit -m "コミット"
+git commit -m "commit"
 git push origin master
 ```
