@@ -5,6 +5,7 @@ const addMyMoney = document.getElementById("add-my-money")
 const myMoneyDisplay = document.getElementById("my-money")
 const addAmountMoney = document.getElementById("add-amount-money")
 const amountMoneyDisplay = document.getElementById("amount-money")
+const chargeMoney = document.getElementById("charge-money")
 
 let myMoney = 0
 let amountMoney = 0
@@ -18,6 +19,15 @@ addAmountMoney.onclick = () => {
   if (myMoney >= 100) {
     myMoney -= 100
     amountMoney += 100
+    myMoneyDisplay.textContent = myMoney
+    amountMoneyDisplay.textContent = amountMoney
+  }
+}
+
+chargeMoney.onclick = () => {
+  if (amountMoney > 0) {
+    myMoney = myMoney + amountMoney
+    amountMoney = 0
     myMoneyDisplay.textContent = myMoney
     amountMoneyDisplay.textContent = amountMoney
   }
